@@ -2,10 +2,6 @@
   <div class="services">
     <div class="container">
       <div class="intro">
-        <!-- <p>
-          My services for
-          <span class="org">non-profit organization</span> are free.
-        </p>-->
         <p>I create static, dynamic (CMS) and full stack web applications that are responsive, fast & easy to use.</p>
 
         <div class="my-skills">
@@ -52,7 +48,7 @@
 
 <style>
 :root {
-  --size: 2.7em;
+  --size: 14px;
 }
 
 .progress {

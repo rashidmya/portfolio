@@ -5,21 +5,24 @@
 </template>
 
 <style>
-.whip {
-  max-height: 80vw;
+.doodle {
   display: block;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
+.whip {
+  max-height: 80vw;
+ 
+}
 
 @media (min-width: 1024px) {
   .whip {
-    height: 30vw;
+    height: 35vw;
     width: 100%;
   }
   .doodle {
-    max-height: 30vw;
+    max-height: 35vw;
   }
 }
 </style>

@@ -1,6 +1,27 @@
+<script setup>
+import anime from 'animejs'
+import { onMounted } from 'vue';
+
+onMounted(()=> {
+const textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline()
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 180*i
+  })
+})
+</script>
+
 <template>
   <div class="greeting">
-    <h1>Hello.</h1>
+    <h1 class="ml2">Hello.</h1>
     <p class="name">My name is Rashid.</p>
     <p>
       I am a security and forensics graduate & an independant self-taught full stack developer who enjoys learning new technologies.
@@ -11,6 +32,16 @@
 </template>
 
 <style scoped>
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 h1 {
   font-weight: 500;
   font-size: 4.7em;

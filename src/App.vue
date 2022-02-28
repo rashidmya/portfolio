@@ -11,19 +11,35 @@ import TheGreeting from '@/components/TheGreeting.vue'
       <TheGreeting/>
 
       <nav>
-        <RouterLink to="/" >return { myPassion }</RouterLink>
-        <RouterLink to="/services">return { myServices }</RouterLink>
-        <RouterLink to="/projects">return { myProjects }</RouterLink>
+        <RouterLink to="/" >return { graphicDesign }</RouterLink>
+        <RouterLink to="/services">return { services }</RouterLink>
+        <RouterLink to="/projects">return { projects }</RouterLink>
       </nav>
     </div>
   </header>
 
 
-  <RouterView />
+  <router-view v-slot="{ Component }">
+  <transition name="scale" mode="out-in">
+    <component :is="Component" />
+  </transition>
+</router-view>
 </template>
 
 <style>
 @import '@/assets/base.css';
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.5s ease;
+}
+
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
 
 #app {
   max-width: 1400px;
