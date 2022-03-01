@@ -13,8 +13,8 @@ anime.timeline()
     opacity: [0,1],
     translateZ: 0,
     easing: "easeOutExpo",
-    duration: 950,
-    delay: (el, i) => 180*i
+    duration: 1280,
+    delay: (el, i) => 222*i
   })
 })
 </script>
@@ -32,18 +32,13 @@ anime.timeline()
 </template>
 
 <style scoped>
-.ml2 {
-  font-weight: 900;
-  font-size: 3.5em;
-}
 
 .ml2 .letter {
   display: inline-block;
-  line-height: 1em;
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 4.7em;
   margin: 0;
 }

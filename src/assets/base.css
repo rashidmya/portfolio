@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik:wght@300;400;500;600;700;800;900&family=Yantramanav:wght@400;500;700;900&display=swap');
 
 :root {
+    --tools-size: 14px;
+
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
