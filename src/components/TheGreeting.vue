@@ -2,20 +2,20 @@
 import anime from 'animejs'
 import { onMounted } from 'vue';
 
-onMounted(()=> {
-const textWrapper = document.querySelector('.ml2');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+onMounted(() => {
+  const textWrapper = document.querySelector('.ml2');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline()
-  .add({
-    targets: '.ml2 .letter',
-    scale: [4,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 1280,
-    delay: (el, i) => 222*i
-  })
+  anime.timeline()
+    .add({
+      targets: '.ml2 .letter',
+      scale: [4, 1],
+      opacity: [0, 1],
+      translateZ: 0,
+      easing: "easeOutExpo",
+      duration: 1280,
+      delay: (el, i) => 222 * i
+    })
 })
 </script>
 
@@ -24,7 +24,7 @@ anime.timeline()
     <h1 class="ml2">Hello.</h1>
     <p class="name">My name is Rashid.</p>
     <p>
-      I am a security and forensics graduate & an independant self-taught full stack developer who enjoys learning new technologies.
+      I've studied Cyber Security & Forensics and i'm an independant self-taught full stack developer who enjoys learning new technologies.
       You can find most of my work on Github.
     </p>
     <p>My hobbies are playing video games, scuba diving, rock climbing & working out.</p>
@@ -32,7 +32,6 @@ anime.timeline()
 </template>
 
 <style scoped>
-
 .ml2 .letter {
   display: inline-block;
 }

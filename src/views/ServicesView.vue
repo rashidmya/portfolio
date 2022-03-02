@@ -1,6 +1,18 @@
 <script setup>
+import { ref } from 'vue';
 import MySkills from '@/components/Services/MySkills.vue';
 import ContactMe from '@/components/Services/ContactMe.vue'
+import TheShowcase from '../components/Services/TheShowcase.vue';
+
+const tool = ref('none');
+
+function showcase(t){
+  tool.value = t
+}
+
+function resetShowcase(){
+  tool.value = 'none'
+}
 </script>
 
 <template>
@@ -22,10 +34,12 @@ import ContactMe from '@/components/Services/ContactMe.vue'
       </div>
       <div class="inner-shadow"></div>
       <div class="screen">
-        <div class="container">
+        <div class="container" style="display: block;">
           <div class="intro">
             <p>I create static, dynamic (CMS) and full stack web applications that are responsive, fast & easy to use.</p>
-            <MySkills />
+            <MySkills @tool="showcase" @reset="resetShowcase" />
+            <TheShowcase :tool="tool" />
+    
           </div>
           <ContactMe />
         </div>

@@ -1,34 +1,45 @@
+<script setup>
+const emit = defineEmits(['tool','reset']);
+
+function showcase(tool){
+  emit('tool', tool)
+}
+
+function reset(){
+  emit('reset')
+}
+</script>
+
 <template>
     <div class="my-skills">
         <div class="front-end">
             <p>Frontend</p>
-            <div class="tool html"></div>
-            <div class="tool css"></div>
-            <div class="tool vue"></div>
-            <div class="tool javascript"></div>
-            <div class="tool jquery"></div>
-            <div class="tool bootstrap"></div>
+            <div @mouseenter="showcase('html5')" @mouseleave="reset" class="tool html"></div>
+            <div @mouseenter="showcase('css3')" @mouseleave="reset" class="tool css"></div>
+            <div @mouseenter="showcase('vuejs')" @mouseleave="reset" class="tool vue"></div>
+            <div @mouseenter="showcase('javascript')" @mouseleave="reset" class="tool javascript"></div>
+            <div @mouseenter="showcase('jquery')" @mouseleave="reset" class="tool jquery"></div>
             <div class="progress">
                 <div class="progress-bar-frontend" style="width: 60%"></div>
             </div>
         </div>
         <div class="back-end">
             <p>Backend</p>
-            <div class="tool typescript"></div>
-            <div class="tool nodejs"></div>
-            <div class="tool express"></div>
-            <div class="tool nuxtjs"></div>
-            <div class="tool socketio"></div>
+            <div @mouseenter="showcase('typescript')" @mouseleave="reset" class="tool typescript"></div>
+            <div @mouseenter="showcase('nodejs')" @mouseleave="reset" class="tool nodejs"></div>
+            <div @mouseenter="showcase('express')" @mouseleave="reset" class="tool express"></div>
+            <div @mouseenter="showcase('nuxtjs')" @mouseleave="reset" class="tool nuxtjs"></div>
+            <div @mouseenter="showcase('socketio')" @mouseleave="reset" class="tool socketio"></div>
             <div class="progress">
                 <div class="progress-bar-backend" style="width: 85%"></div>
             </div>
         </div>
         <div class="databases">
             <p>Databases</p>
-            <div class="tool mongodb"></div>
-            <div class="tool mysql"></div>
-            <div class="tool postgresql"></div>
-            <div class="progress">
+            <div @mouseenter="showcase('mongodb')" @mouseleave="reset" class="tool mongodb"></div>
+            <div @mouseenter="showcase('mysql')" @mouseleave="reset" class="tool mysql"></div>
+            <div @mouseenter="showcase('postgresql')" @mouseleave="reset" class="tool postgresql"></div>
+            <div  class="progress">
                 <div class="progress-bar-databases" style="width: 75%"></div>
             </div>
         </div>
